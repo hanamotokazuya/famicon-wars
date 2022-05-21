@@ -1,11 +1,18 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import Layout from "../src/components/Layout";
-import Famicon from "../src/components/Famicon";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Famicon />
+      <div className="flex flex-col items-center gap-10">
+        <Link href="/host">
+          <a className="text-2xl hover:text-red-400">ホスト</a>
+        </Link>
+        <Link href="/crew">
+          <a className="text-2xl hover:text-red-400">クルー</a>
+        </Link>
+      </div>
     </Layout>
   );
 };
